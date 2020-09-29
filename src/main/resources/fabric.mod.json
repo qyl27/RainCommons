@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "raincommons",
+  "version": "${version}",
+  "name": "RainCommons",
+  "description": "A library for fabric modding.",
+  "authors": [
+    "AmemiyaSigure"
+  ],
+  "contact": {
+    "repo": "https://github.com/AmemiyaSigure/RainCommons"
+  },
+  "license": "MIT",
+  "icon": "assets/raincommons/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "cx.rain.mc.fabric.raincommons.client.RainCommonsClient"
+    ],
+    "main": [
+      "cx.rain.mc.fabric.raincommons.RainCommons"
+    ]
+  },
+  "mixins": [
+    "raincommons.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.0+build.208",
+    "fabric": "*",
+    "minecraft": "1.16.3"
+  }
+}
