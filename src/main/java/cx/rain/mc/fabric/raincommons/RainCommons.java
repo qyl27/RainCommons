@@ -10,6 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public final class RainCommons implements ModInitializer {
+    public static final String Version = "1.0.1";
+
     private final boolean IsDev = false;
 
     private final Logger log = LogManager.getLogger("RainCommons");

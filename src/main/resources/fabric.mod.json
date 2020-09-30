@@ -14,9 +14,6 @@
   "icon": "assets/raincommons/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "cx.rain.mc.fabric.raincommons.client.RainCommonsClient"
-    ],
     "main": [
       "cx.rain.mc.fabric.raincommons.RainCommons"
     ]
