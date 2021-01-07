@@ -1,6 +1,8 @@
 package cx.rain.mc.fabric.raincommons.mixin;
 
 import com.mojang.authlib.GameProfile;
+import cx.rain.mc.fabric.raincommons.event.callback.PlayerLeaveCallback;
+import cx.rain.mc.fabric.raincommons.event.callback.PlayerLoginCallback;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.packet.c2s.login.LoginHelloC2SPacket;
 import net.minecraft.server.network.ServerLoginNetworkHandler;
@@ -25,7 +27,7 @@ public class ServerLoginNetworkHandlerMixin {
     @Inject(method = "onHello", at = @At("HEAD"), cancellable = true)
     public void beforeOnHello(LoginHelloC2SPacket packet, CallbackInfo ci) {
         if (PlayerLoginCallback.EVENT.invoker().accept(packet.getProfile(), connection)
-                == ActionRsult.FAIL) {
+                == ActionResult.FAIL) {
             ci.cancel();
         }
     }

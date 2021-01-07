@@ -14,6 +14,7 @@ public interface PlayerLoginCallback {
                         return ActionResult.FAIL;
                     }
                 }
+                return ActionResult.SUCCESS;
             });
 
     ActionResult accept(GameProfile profile, ClientConnection connection);
