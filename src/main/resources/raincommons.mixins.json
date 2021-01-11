@@ -4,7 +4,7 @@
   "package": "cx.rain.mc.fabric.raincommons.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ServerLoginNetworkHandlerMixin"
+    "PlayerManagerMixin"
   ],
   "client": [
   ],
